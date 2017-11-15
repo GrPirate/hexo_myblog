@@ -2,6 +2,7 @@
 title: git 使用遇到的问题（持续更新中）
 date: 2017-11-13 17:09:34
 tags:
+categories: git
 ---
 
 ## 1、使用git add <file>有些文件添加失败
