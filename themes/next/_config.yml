@@ -399,7 +399,7 @@ gitment:
   lazy: false # Comments lazy loading with a button
   cleanly: false # Hide 'Powered by ...' on footer, and more
   language: en # Force language, or auto switch by theme
-  github_user: 23355108 # MUST HAVE, Your Github ID
+  github_user: GrPirate # MUST HAVE, Your Github ID:23355108
   github_repo: GrPirate.github.io # MUST HAVE, The repo you use to store Gitment comments
   client_id: 5bead74743d56b3e7a97 # MUST HAVE, Github client id for the Gitment
   client_secret: 0d646dabf95dcb0f3c04ef0db9d1b37fe315e291 # EITHER this or proxy_gateway, Github access secret token for the Gitment
