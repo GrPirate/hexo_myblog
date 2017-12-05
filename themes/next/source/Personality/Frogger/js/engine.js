@@ -48,9 +48,9 @@ var Engine = (function (global) {
          */
         if (!player.success) {
             win.requestAnimationFrame(main);
-        }else{
+        } else {
             clearInterval(timeId);
-            Rank.load(name,time);
+            Rank.load(name, time);
             $("#suc").show();
         }
     }
@@ -59,7 +59,7 @@ var Engine = (function (global) {
      * 做一次就够了
      */
     function init() {
-        
+
     }
 
     /* 这个函数被 main 函数（我们的游戏主循环）调用，它本身调用所有的需要更新游戏角色
@@ -91,9 +91,6 @@ var Engine = (function (global) {
         allEnemies.forEach(function (enemy) {
             player.collisions(enemy.x, enemy.y);
         });
-        // if (player.collided) {
-        //     stop=true;
-        // }
     }
 
     /**
@@ -105,7 +102,7 @@ var Engine = (function (global) {
             if (!allEnemies[i].leaved) {
                 allEnemies[cnt++] = allEnemies[i];
             }
-        while(allEnemies.length>cnt){
+        while (allEnemies.length > cnt) {
             allEnemies.pop();
         }
     }
@@ -163,10 +160,10 @@ var Engine = (function (global) {
     function reset() {
         lastTime = Date.now();
         player.reset();
-        allEnemies=[];
+        allEnemies = [];
         main();
     }
-    
+
     /* 紧接着我们来加载我们知道的需要来绘制我们游戏关卡的图片。然后把 init 方法设置为回调函数。
      * 那么党这些图片都已经加载完毕的时候游戏就会开始。
      */

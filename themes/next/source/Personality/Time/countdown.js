@@ -1,14 +1,14 @@
 const WINDOW_WIDTH = document.body.clientWidth;
 const WINDOW_HEIGHT = 789;
-const RADIUS = parseInt(document.body.clientWidth / 120);
-const MARGIN_LEFT = 100;
-const MARGIN_TOP = 20;
+const RADIUS = Math.round(WINDOW_WIDTH*4/5/108)-1;
+const MARGIN_LEFT = Math.round(WINDOW_WIDTH/10);
+const MARGIN_TOP = Math.round(WINDOW_HEIGHT/10);
 const COLOR = "#086B70";
-const END_TIME = new Date(2017, 11, 4, 20, 20, 20);
+const END_TIME = new Date();
 
 const colors = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"];
 
-
+END_TIME.setTime(END_TIME.getTime()+3600*1000);
 var currentTimeSeconds = getCurrentShowTime();
 var balls = [];
 var canvas = document.querySelector("#canvas");
