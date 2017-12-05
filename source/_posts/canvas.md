@@ -76,5 +76,7 @@ context.arc(
 ```
 **`context.closePath()`会使绘制路径自动闭合**
 
-- 应用实例
+# 应用实例：酷炫的倒计时动画
+
+_**[倒计时动画](https://grpirate.github.io/Personality/Time/)**_
 
