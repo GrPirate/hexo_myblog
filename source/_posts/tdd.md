@@ -2,7 +2,7 @@
 title: 转:浅谈测试驱动开发（TDD）
 date: 2017-12-06 17:07:06
 tags: 测试
-categories: 学习笔记
+categories: 转载
 ---
 
 # 背景
