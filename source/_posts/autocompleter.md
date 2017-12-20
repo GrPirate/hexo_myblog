@@ -43,6 +43,185 @@ npm install jquery-autocompleter
 ```html
 <link rel="stylesheet" href="css/jquery.autocompleter.css"> <!-- 可根据具体项目情况进行修改-->
 ```
+
+**该例子使用到了以下样式**
+
+```css
+/**
+ * Common
+ */
+
+body {
+    /* Pattern made by Atle Mo. */
+    background-image: url('../img/bcg.png');
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+main {
+    width: 600px;
+    margin: 40px auto;
+}
+
+h1 {
+    font-size: 58px;
+}
+
+hr {
+    width: 50%;
+    border: 0;
+    height: 1px;
+    margin: 40px auto;
+    background: #4d4d4d;
+}
+
+a {
+    color: #777;
+}
+
+p {
+    color: #c8c7c7;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/**
+ * Custom
+ */
+
+p.caption {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.button {
+    margin: 20px auto;
+    display: inline-block;
+    padding: 16px 40px;
+    background: #70b3eb;
+    text-decoration: none;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 0px -1px 1px rgba(26, 62, 103, 0.42);
+    box-shadow: inset 0 0 0 1px #70b3eb, inset 0 1px 0 1px rgba(255,255,255,0.5);
+    border-radius: 5px;
+    -webkit-transition: 0.2s ease -webkit-transform;
+    -moz-transition: 0.2s ease -moz-transform;
+    transition: 0.2s ease transform;
+}
+
+.button:hover {
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+.field {
+    position: relative;
+}
+
+.field input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000000;
+    height: 60px;
+    font-size: 24px;
+    padding: 0 12px;
+    border: 0;
+}
+
+.field input:focus {
+    outline: 0;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url('../img/icon.png');
+  background-color: #ffffff;
+}
+
+/**
+ * Simplecomplete
+ */
+
+ .autocompleter {
+    width: 100%;
+    background: #dddddd;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+}
+
+.autocompleter,
+.autocompleter-hint {
+    position: absolute;
+}
+
+.autocompleter-list {
+    box-shadow: inset 0px 0px 6px rgba(0,0,0,0.1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.autocompleter-item-selected {
+    background: #ffffff;
+}
+
+.autocompleter-item {
+    padding: 6px 12px;
+    color: #444444;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.autocompleter-item:hover {
+    background: #dbed8a;
+}
+
+.autocompleter-item strong {
+    background: #f9de8f;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+.autocompleter-item span {
+    color: #bbbbbb;
+}
+
+.autocompleter-hint {
+    color: #ccc;
+    text-align: left;
+    top: -56px;
+    font-weight: 400;
+    left: 0;
+    width: 100%;
+    padding: 12px 12px 12px 13px;
+    font-size: 24px;
+    display: none;
+}
+
+.autocompleter-hint span {
+    color: transparent;
+}
+
+.autocompleter-hint-show {
+    display: block;
+}
+
+.autocompleter-closed {
+    display: none;
+}
+```
 ### Html:
 
 ```html
@@ -55,17 +234,14 @@ npm install jquery-autocompleter
 ### 初始化定义
 
 ```javascript
-
 $(function () {
     $('#input').autocompleter({ source: 'path/to/get_data_request' });
 });
-
 ```
 
 **OR for local JSON source**
 
 ```javascript
-
 var data = [
     { "value": "1", "label": "one" },
     { "value": "2", "label": "two" },
@@ -75,7 +251,6 @@ var data = [
 $(function () {
     $('#input').autocompleter({ source: data });
 });
-
 ```
 
 
@@ -111,51 +286,39 @@ $(function () {
 * 插件定以后修改配置项:option
 
 ```javascript
-
 $('#input').autocompleter('option', data);
-
 ```
 
 * 修改默认配置项:defaults
 
 ```javascript
-
 $.autocompleter('defaults', {
     customClass: 'myClassForAutocompleter'
 });
-
 ```
 
 * 展开:open
 
 ```javascript
-
 $('#input').autocompleter('open');
-
 ```
 
 * 关闭:close
 
 ```javascript
-
 $('#input').autocompleter('close');
-
 ```
 
 * 销毁插件:destroy
 
 ```javascript
-
 $('#input').autocompleter('destroy');
-
 ```
 
 * 清除缓存:clearCache
 
 ```javascript
-
 $.autocompleter('clearCache');
-
 ```
 
 **效果预览：[https://grpirate.github.io/Personality/autocompleter](https://grpirate.github.io/Personality/autocompleter)**
