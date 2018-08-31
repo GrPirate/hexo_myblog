@@ -122,4 +122,24 @@ hexo d
 
 到这里我们就已经完成了博客的部署工作，在浏览器中输入*https://xxx.github.io*就可以看到我们的博客网站了
 
+
+# 写博客
+
+1. 创建文章
+
+```bash
+hexo new 'pageName'
+OR
+hexo new post 'pageName'
+```
+
+此操作会在`./source/_posts`文件夹下生成一个`pageName.md`文件和`pageName`文件夹（存储`pageName.md`中的图片）
+
+2. 设置断点
+
+```md
+<!-- more -->
+```
+博客首页只显示`<!-- more -->`前的内容，在此处显示阅读更多入口
+
 	
